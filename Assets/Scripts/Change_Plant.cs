@@ -4,30 +4,25 @@ using UnityEngine;
 
 public class Change_Plant : MonoBehaviour
 {
-     Sprite Plant_Level_1_3;
-     Sprite Plant_Level_1_2;
-     Sprite Plant_Level_1_1;
-     Sprite Plant_Level_1_0;
+    public Sprite Plant_Level_1_3;
+    public Sprite Plant_Level_1_2;
+    public Sprite Plant_Level_1_1;
+    public Sprite Plant_Level_1_0;
 
-     Sprite Plant_Level_2_3;
-     Sprite Plant_Level_2_2;
-     Sprite Plant_Level_2_1;
-     Sprite Plant_Level_2_0;
+    public Sprite Plant_Level_2_3;
+    public Sprite Plant_Level_2_2;
+    public Sprite Plant_Level_2_1;
+    public Sprite Plant_Level_2_0;
 
-    bool hasSpike;
-    bool hasflower;
-    int plantLevel;
+    public bool hasSpike = true;
+    public bool hasflower = true;
+    public int plantLevel = 1;
+    
 
-    void Start() {
-       
-        hasflower = true;
-        hasSpike = true;
-        plantLevel = 1;
-    }
+    void CheckUpgrade()
+        {
 
-    void Update()
-    {
-
+        
         if (hasSpike && hasflower && (plantLevel == 1))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Plant_Level_1_3;
@@ -60,6 +55,7 @@ public class Change_Plant : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Plant_Level_2_3;
         }
-
     }
+
+    
 }

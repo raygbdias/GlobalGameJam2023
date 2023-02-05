@@ -220,10 +220,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cceb66bcb0ad346aefe0075bb72424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Plant_Level_1_3: {fileID: -1199202701, guid: 0095ce416337e8e4dab231486aa41f42, type: 3}
-  Plant_Level_1_2: {fileID: -197012368, guid: 0095ce416337e8e4dab231486aa41f42, type: 3}
-  Plant_Level_1_1: {fileID: -1866050345, guid: 0095ce416337e8e4dab231486aa41f42, type: 3}
-  Plant_Level_1_0: {fileID: 1821457079, guid: 0095ce416337e8e4dab231486aa41f42, type: 3}
+  Plant_Level_1_3: {fileID: 0}
+  Plant_Level_1_2: {fileID: 0}
+  Plant_Level_1_1: {fileID: 0}
+  Plant_Level_1_0: {fileID: 0}
+  Plant_Level_2_3: {fileID: 0}
+  Plant_Level_2_2: {fileID: 0}
+  Plant_Level_2_1: {fileID: 0}
+  Plant_Level_2_0: {fileID: 0}
+  hasSpike: 0
+  hasflower: 0
+  plantLevel: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395402129}
   - component: {fileID: 1395402131}
-  - component: {fileID: 1395402130}
+  - component: {fileID: 1395402132}
   m_Layer: 0
   m_Name: RootsState
   m_TagString: Untagged
@@ -512,28 +519,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395402128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1099, y: -1.0683, z: -3.1}
-  m_LocalScale: {x: 3.670649, y: 3.726822, z: 1}
+  m_LocalPosition: {x: 2.1099, y: -1.0811, z: -3.1}
+  m_LocalScale: {x: 3.670649, y: 3.736139, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1698913023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1395402130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395402128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac42edef1b128b643abc14d38a75a11c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Roots_0: {fileID: -1979194695, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
-  Roots_1: {fileID: -1825663249, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
-  Roots_2: {fileID: -924300152, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
 --- !u!212 &1395402131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -586,6 +578,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1395402132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395402128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced14fdf47c53964798675ddba05f266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Roots_0: {fileID: -1979194695, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
+  Roots_1: {fileID: -1825663249, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
+  Roots_2: {fileID: -924300152, guid: 5c7cb93fdde6ac64dbbe3e510fcc6ea9, type: 3}
 --- !u!1 &1501488830
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,23 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RootState : MonoBehaviour
+public class Root_Script : MonoBehaviour
 {
 
-    int rootLevel;
+    int rootLevel = 0;
 
 
     public Sprite Roots_0;
     public Sprite Roots_1;
     public Sprite Roots_2;
-    // Start is called before the first frame update
-    void Start()
+
+
+    void Update()
     {
-        rootLevel = 0;
+        CheckUpgrade();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void CheckUpgrade()
     {
         if (rootLevel == 0)
         {
@@ -31,15 +33,6 @@ public class RootState : MonoBehaviour
         else if (rootLevel == 2)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Roots_2;
-        }
-
-        if (Input.GetKey("up"))
-        {
-            rootLevel++;
-        }
-        if (Input.GetKey("down"))
-        {
-            rootLevel--;
         }
 
     }
