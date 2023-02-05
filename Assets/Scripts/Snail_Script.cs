@@ -6,8 +6,7 @@ public class Snail_Script : MonoBehaviour
 {
 
 
-    float speed = 0.5f;
- 
+    float speed = 1f;
     public int Hitpoints;
     public int MaxHitpoints = 100;
     public SliderBehaviour Healthbar;

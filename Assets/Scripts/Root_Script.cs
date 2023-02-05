@@ -16,7 +16,23 @@ public class Root_Script : MonoBehaviour
     void Update()
     {
         CheckUpgrade();
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            rootLevel++;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            rootLevel--;
+        }
+
+
+
+
     }
+
+
 
 
 
@@ -34,6 +50,8 @@ public class Root_Script : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Roots_2;
         }
+
+
 
     }
 }

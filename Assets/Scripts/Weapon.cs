@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour {
+public class Bee_Ability : MonoBehaviour {
 
     public Transform firepoint;
     public GameObject bulletprefab;
@@ -10,12 +10,12 @@ public class Weapon : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            Ability_Bee();
         }
     }
 
 
-    void Shoot() { 
+    void Ability_Bee() { 
         Instantiate(bulletprefab, firepoint.position, firepoint.rotation); 
     }
 }

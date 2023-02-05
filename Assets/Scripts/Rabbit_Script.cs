@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Rabbit_Script : MonoBehaviour
 {
 
-    float speed = 0.5f;
+    float speed = 1f;
 
     public int Hitpoints = 100;
 
