@@ -4,17 +4,47 @@ using UnityEngine;
 
 public class Snail_Script : MonoBehaviour
 {
-    // Update is called once per frame
+
+
+    float speed = 0.5f;
+ 
+    public int Hitpoints;
+    public int MaxHitpoints = 100;
+    public SliderBehaviour Healthbar;
+
+    void Start()
+    {
+        Hitpoints = MaxHitpoints;
+    }    
+    
+    
+    
+    
+    
+    
     void Update()
     {
         Vector3 left = Vector3.left;
-
         float timeSinceLastFrame = Time.deltaTime;
+        Vector3 translation = left * timeSinceLastFrame * speed;
+        transform.Translate(translation);
 
-        Vector3 translation = left * timeSinceLastFrame;
+     
+    }
 
-        transform.Translate(
-            translation
-            );
+    public void TakeDamage(int damage)
+    {
+        Hitpoints -= damage;
+        if (Hitpoints <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
+
+

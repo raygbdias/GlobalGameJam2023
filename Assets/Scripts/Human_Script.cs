@@ -1,33 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Rabbit_Script : MonoBehaviour
+public class Human_Script : MonoBehaviour
 {
-
-    float speed = 0.5f;
-
-    public int Hitpoints = 100;
-
-
+    public int health = 100;
     void Update()
     {
         Vector3 left = Vector3.left;
 
         float timeSinceLastFrame = Time.deltaTime;
 
-        Vector3 translation = left * timeSinceLastFrame * speed;
+        Vector3 translation = left * timeSinceLastFrame;
 
         transform.Translate(translation);
-
-
     }
 
     public void TakeDamage(int damage)
     {
-        Hitpoints -= damage;
-        if (Hitpoints <= 0)
+        health -= damage;
+        if (health <= 0)
         {
             Die();
         }
@@ -37,5 +29,4 @@ public class Rabbit_Script : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
